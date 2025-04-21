@@ -19,5 +19,6 @@ int main(int argc, char ** argv){
         ierror = MPI_Recv(rec_buf,13,MPI_CHAR,0,tag,MPI_COMM_WORLD,&status);
         printf("Process 1 recevied %s \n",rec_buf);
     }
+    ierror=MPI_Finalize();
     return ierror;
 }
