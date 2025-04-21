@@ -21,7 +21,6 @@ int main() {
         {
             #pragma omp task
              result = factorial(number);
-            #pragma omp barrier
             #pragma omp single
             {
                 #pragma omp taskwait
